@@ -26,6 +26,9 @@ class SimpleEx(title: String) : JFrame() {
     private var serialPort: SerialPort? = null
     private val imageLabel = JLabel()
     var imageWindow = JDialog()
+    var itemsMap: MutableMap<String, Set<String>>? = null
+    lateinit var newimg: Image
+    lateinit var itemImage: ImageIcon
     init {
         val myFile = File("$curPath/itemsBtns.dat")
         val fin = FileInputStream(myFile)
@@ -65,8 +68,8 @@ class SimpleEx(title: String) : JFrame() {
                 if (str.contains("\n") || str.contains(";")) {
                     if (isNumeric(totalStr)) {
                         val item = btnsItemsMap[totalStr]
-                        val itemsMap = getItemsMap(folderNamePath)
-                        val tempList = itemsMap[item]?.toList()
+                        if  (itemsMap == null) itemsMap = getItemsMap(folderNamePath)
+                        val tempList = itemsMap!![item]?.toList()
                         itemsComboBox.selectedItem = item
                         showItem(tempList)
                     }
@@ -103,7 +106,7 @@ class SimpleEx(title: String) : JFrame() {
         val nvsuLogoWhite = "NVSU_white.png"
         var nvsuLogo = ImageIcon(nvsuLogoWhite) //лого универа
         var image = nvsuLogo.image // объект для преобразования
-        var newimg = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH) // задаем размер
+        newimg = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH) // задаем размер
         nvsuLogo = ImageIcon(newimg) //применяем новые параметры
 
         val nvsuLabel = JLabel(nvsuLogo) //лейбл с лого универа
@@ -147,12 +150,12 @@ class SimpleEx(title: String) : JFrame() {
         upperNorthBox.add(Box.createHorizontalGlue())
 
         val northBoxMain = Box(BoxLayout.Y_AXIS)
-        val itemsMap = getItemsMap(folderNamePath)
+        if  (itemsMap == null) itemsMap = getItemsMap(folderNamePath)
 //        val curPath = System.getProperty("user.dir")
 //        val backgroundImage = "items/background.jpg"
 //        var filesSet =  listOf("$curPath/welcome.txt", "$curPath/$backgroundImage")
 
-        val itemsList = itemsMap.keys.toList()
+        val itemsList = itemsMap!!.keys.toList()
         val comboBoxModel = DefaultComboBoxModel<String>()
         itemsComboBox.setRenderer(MyComboBoxRenderer("Выберите экспонат: ▼"));
         comboBoxModel.addAll(itemsList)
@@ -162,7 +165,7 @@ class SimpleEx(title: String) : JFrame() {
             println("selected = $curItem")
             println("number to Arduino = ${itemsBtnsMap[curItem]}")
             serialPort!!.writeString("${itemsBtnsMap[curItem]};")
-            val tempList = itemsMap[itemsComboBox.selectedItem]?.toList()
+            val tempList = itemsMap!![itemsComboBox.selectedItem]?.toList()
             showItem(tempList)
         }
         itemsComboBox.model = comboBoxModel
@@ -196,18 +199,20 @@ class SimpleEx(title: String) : JFrame() {
         println("filesSet = $filesSet")
         val text = File(filesSet.first()).readText()
         textArea.text = text
-        var itemImage = ImageIcon(filesSet.last())
+        itemImage = ImageIcon(filesSet.last())
         val newWidth = 500
-        val newimg = getScaledImage(itemImage, newWidth, 800)
+        newimg = getScaledImage(itemImage, newWidth, 800)
 
         imageHolder.icon = ImageIcon(newimg)
         imageHolder.preferredSize = Dimension(newWidth, imageHolder.minimumSize.height)
-        imageHolder.addMouseListener(object : MouseAdapter() {
-            override fun mousePressed(mouseEvent: MouseEvent?) {
-//                if (imageWindow!=null) imageWindow!!.isVisible = false
-                makeImageWindow(itemImage)
-            }
-        })
+//        imageHolder.addMouseListener(object : MouseAdapter() {
+//            override fun mousePressed(mouseEvent: MouseEvent?) {
+////                if (imageWindow!=null) imageWindow!!.isVisible = false
+//                println("clicked on label")
+//                println("listeners size = ${imageHolder.mouseListeners.size}")
+//                makeImageWindow(itemImage)
+//            }
+//        })
         //            imageHolder.horizontalAlignment = JLabel.CENTER
         ////        imageHolder.icon = itemImage
         //            imageHolder.preferredSize = Dimension(400, 300)
@@ -346,9 +351,9 @@ class SimpleEx(title: String) : JFrame() {
         c.gridy = 0
 //        imageHolder.border = BorderFactory.createLineBorder(Color.RED, 2)
 //        val filesSet = frame.getFilesSet()
-        var itemImage = ImageIcon(filesSet.last())
+        itemImage = ImageIcon(filesSet.last())
 
-        var newimg = getScaledImage(itemImage, 500, 800)
+        newimg = getScaledImage(itemImage, 500, 800)
 //            image.getScaledInstance(imageWidth, imageHeight, Image.SCALE_SMOOTH) // задаем размер
         imageHolder.icon = ImageIcon(newimg)
         imageHolder.border = BorderFactory.createLineBorder(Color.RED, 2)
@@ -356,6 +361,14 @@ class SimpleEx(title: String) : JFrame() {
 //        imageHolder.icon = itemImage
         imageHolder.preferredSize = Dimension(400, 300)
         pane.add(imageHolder, c)
+        imageHolder.addMouseListener(object : MouseAdapter() {
+            override fun mousePressed(mouseEvent: MouseEvent?) {
+//                if (imageWindow!=null) imageWindow!!.isVisible = false
+                println("clicked on label")
+                println("listeners size = ${imageHolder.mouseListeners.size}")
+                makeImageWindow(itemImage)
+            }
+        })
 
 //        button = JButton("Long-Named Button 4")
 ////        c.fill = GridBagConstraints.HORIZONTAL

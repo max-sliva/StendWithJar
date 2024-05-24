@@ -73,7 +73,7 @@ fun getItemsMap(folderNamePath: String): MutableMap<String, Set<String>> {
     val itemsFolderName = appProps.getProperty("itemsFolder")
     val itemsDir = "$curPath/items/$itemsFolderName"
     val dirsList = listDirsUsingDirectoryStream(itemsDir)
-    println("dirsList = $dirsList")
+    println("dirsList in utils = $dirsList")
     //var setOfItems =
 //    var itemsMap = mutableMapOf<String, String>()
     val itemsMap2 = mutableMapOf<String, Set<String>>() //мап для хранения названия экспоната и набора из его описания и картинки

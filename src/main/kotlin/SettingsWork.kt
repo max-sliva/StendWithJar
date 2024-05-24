@@ -39,7 +39,7 @@ class SettingsWork: JFrame() {
         itemsFolderName = appProps.getProperty("itemsFolder")
         itemsDir = "$curPath/items/$itemsFolderName"
         dirsList = listDirsUsingDirectoryStream(itemsDir)
-        println("dirsList = $dirsList")
+        println("dirsList in SettingsWork = $dirsList")
         val itemsMap = getItemsMap(folderNamePath)
         itemsNames = itemsMap.keys
         println("keys = $itemsNames")
