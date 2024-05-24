@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Stend">
+    <output-path>$PROJECT_DIR$/out/artifacts/Stend</output-path>
+    <root id="archive" name="Stend.jar" />
+  </artifact>
+</component>
