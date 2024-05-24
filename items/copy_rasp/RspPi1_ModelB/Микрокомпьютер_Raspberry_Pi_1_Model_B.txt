@@ -1,0 +1,18 @@
+
+Микрокомпьютер Raspberry Pi 1 Model B
+	Raspberry Pi 1 Model B — это первый одноплатный компьютер из серии Raspberry Pi. Основу Raspberry Pi 1 Model B составляет система на чипе (SoC) Broadcom BCM2835 с процессором ARM1176JZF-S (частота 700 МГц) и видео ускорителем VideoCore IV, поддерживающим Full HD-разрешение. До 15 октября 2012 оснащался 256 Мб SDRAM оперативной памяти, а после в два раза больше — 512 Мб. Благодаря контроллеру LAN9512-JZX (USB 2.0 Hub и 10/100 Ethernet) на плате присутствуют 2 порта USB 2.0 и 10/100 Ethernet.
+	
+	Одной из самых интересных особенностей Raspberry Pi является наличие портов GPIO (general purpose input/output). Благодаря этому «малиновый» компьютер можно использовать для управления различными устройствами. В модели Raspberry Pi 1 Model B присутствует 26-пиновый разъем GPIO, среди которых есть следующие интерфейсы SPI, I²C, I²S, UART. Другие интерфейсы: интерфейс дисплея MIPI DSI (Display Serial Interface), интерфейс видеокамеры 15-pin MIPI CSI-2 (Camera Serial Interface), JTAG.
+	
+	Raspberry Pi 1 Model B оснащен композитным видео выходом RCA и HDMI для подключения к монитору, а также 3,5-миллиметровым разъемом для подключения настольной аудиосистемы или наушников. Системным накопителем являются карты памяти SD/MMC. Потребляемая мощность Raspberry Pi 1 Model B составляет всего 3.5 Вт (700 мА).
+	
+	Raspberry Pi работает в основном на операционных системах, основанных на Linux ядре: Raspbian, CentOS, Fedora, Ubuntu MATE, Android, Arch Linux ARM, openSUSE, Gentoo Linux, Kali Linux, Ubuntu Core. Также возможна установка Windows 10 IOT, RISC OS Pi, FreeBSD, NetBSD и др.
+	
+	Основные характеристики Raspberry Pi 1 Model B:
+	
+		Broadcom BCM2835 SoC;
+		Процессор на 700 МГц ARM1176JZF-S одно ядро (семейство ARM11);
+		GPU Broadcom VideoCore IV;
+		Память на 512 Мб SDRAM;
+		Ethernet.
+	

@@ -1,0 +1,18 @@
+
+Микрокомпьютер Raspberry Pi 2 Model B
+	Raspberry Pi 2 Model B – одноплатный компьютер второго поколения на базе однокристальной системе Broadcom BCM2836 с четырьмя ядрами ARMv7 Cortex-A7 частотой 900 МГц и GPU Broadcom VideoCore IV 250 МГц, оперативная память SDRAM LPDDR2 на 1 ГБ, что в два раза больше, чем у Raspberry Pi 1 Model B+. Внешне Raspberry Pi 2 Model B мало чем отличается от Raspberry Pi 1 Model B+.
+	
+	В данной модели изменился только процессор (был BCM2835, стал BCM2836) и объём памяти, остаются прежними полноразмерный HDMI, 10/100 Ethernet, порты дисплея MIPI DSI (Display Serial Interface) и видеокамеры 15-pin MIPI CSI-2 (Camera Serial Interface), комбинированный 3.5 мм аудио разъем и композитное видео, двухконтактный разъем RUN для сброса, 40-пиновый разъем GPIO, среди которых имеются интерфейсы SPI, I²C, UART.
+	
+	Питание Raspberry Pi 2 Model B осуществляется от 5-вольтового адаптера через разъём micro-USB или пины питания. Рекомендуем использовать источник питания с силой тока 2 А.
+	
+	Основные характеристики Raspberry Pi 2 Model B:
+	
+		Version 1.1: SoC Broadcom BCM2836;
+		Version 1.2: SoC Broadcom BCM2837;
+		Version 1.1: Процессор 32-битный четырехъядерный ARMv7-A Cortex-A7 с тактовой частотой 900 МГц;
+		Version 1.2: Процессор 64-битный четырехъядерный ARMv8-A Cortex-A53 с тактовой частотой 900 МГц;
+		Графический 2-ядерный сопроцессор Video Core IV® Multimedia;
+		Память на 1ГБ LPDDR2 SDRAM;
+		Ethernet.
+	

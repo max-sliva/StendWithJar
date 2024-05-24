@@ -1,0 +1,21 @@
+
+Микрокомпьютер Raspberry Pi 3 Model B
+	Raspberry Pi 3 Model B – одноплатный компьютер третьего поколения на основе 64-битного четырехъядерного ARM v8 Cortex-A53 процессора компании Broadcom SoC BCM2837 с тактовой частотой 1.2 ГГц, с двухъядерным графическим сопроцессор Video Core IV® Multimedia, что обеспечивает Open GL ES 2.0, аппаратное ускорение Open VG и 1080p30 H.264 декодирование. Модель RPi3 дополнена оперативной памятью SDRAM LPDDR2 на 1 ГБ. Внешне трудно найти отличия Raspberry Pi 3 Model B (RPI3) от предыдущей модели Raspberry Pi 2 Model B (RPi2). Но, Raspberry Pi 3 Model B – это совершенно другое изделие, а производительность (по заявлениям разработчика) на 50% выше, чем у предыдущей модели.
+	
+	Помимо Ethernet, устройство дополнено встроенным WiFi 802.11n и Bluetooth (поддержка Bluetooth 4.1 и Bluetooth Low Energy — BLE), антенну можно заметить установленную в левом верхнем углу WiFi/ BT SMD.
+	
+	Питание Raspberry Pi 3 Model B осуществляется от 5-вольтового адаптера через разъём micro-USB или пины питания. Рекомендуется использовать источник питания с силой тока не менее 2 А.
+	
+	В модели Raspberry Pi 3 Model B присутствует 40-пиновый разъем GPIO, среди которых есть следующие интерфейсы SPI, I²C, UART. Имеются интерфейсы дисплея MIPI DSI (Display Serial Interface), видеокамеры 15-pin MIPI CSI-2 (Camera Serial Interface), HDMI, комбинированный 3.5 мм аудио разъем и композитное видео, а справа возле 40-контактного разъема GPIO есть место под двухконтактный разъем RUN для сброса.
+	
+	Raspberry Pi работает в основном на операционных системах, основанных на Linux ядре: Raspbian, Ubuntu MATE, Ubuntu Core, Android, Arch Linux ARM, openSUSE, Gentoo Linux, CentOS, Fedora, Kali Linux. Также возможна установка Windows 10 IOT, RISC OS Pi, FreeBSD, NetBSD и др..
+	
+	Основные характеристики Raspberry Pi 3 Model B:
+	
+		Broadcom BCM2837 SoC;
+		64-битный четырехъядерный ARMv8 Cortex-A53 процессор с тактовой частотой 1.2 ГГц;
+		Графический 2-ядерный сопроцессор Video Core IV® Multimedia;
+		Память на 1ГБ LPDDR2 SDRAM (900 MHz);
+		Ethernet;
+		WIFI 802.11n + Bluetooth 4.1 Low Energy (BLE);
+	
