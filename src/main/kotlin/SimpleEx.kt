@@ -60,7 +60,8 @@ class SimpleEx(title: String) : JFrame() {
             if (event.isRXCHAR) { // если есть данные для приема
                 var str = serialPort!!.readString()
                 str = str.trim()
-                if (!str.contains("\n ;") && str != "" && str != ";") {
+//                if (!str.contains("\n ;") && str != "" && str != ";") {
+                if (!str.contains("\n ;") && str != "" && !str.contains(";")) {
 //                    println("received $str") //выводим принятую строку
                     totalStr += str
                     println("!!!totalStr = $totalStr")
