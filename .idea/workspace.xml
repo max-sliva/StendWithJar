@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0ba485-f4d6-4c4b-bc4b-1a24bf791981" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" afterDir="false" />
     </list>
@@ -57,21 +58,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "max-sliva"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;max-sliva&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/max-sliva/StendWithJar.git",
-    "accountId": "13be28b6-9ffa-4af1-83b4-85e49f70eee0"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/max-sliva/StendWithJar.git&quot;,
+    &quot;accountId&quot;: &quot;13be28b6-9ffa-4af1-83b4-85e49f70eee0&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2guCt6JlTGv2chqyhiGleEMeutW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,30 +81,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build StendWithJar.executor": "Run",
-    "Gradle.StendWithJar [jar].executor": "Run",
-    "JAR Application.StendWithJar-1.0-SNAPSHOT.jar.executor": "Run",
-    "Kotlin.MainKt.executor": "Run",
-    "Kotlin.SimpleExKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/IdeaProjects/StendWithJar/src/main/kotlin",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.33448276",
-    "settings.editor.selected.configurable": "project.kotlinCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build StendWithJar.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StendWithJar [jar].executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.StendWithJar-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.SimpleExKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/StendWithJar/src/main/kotlin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.33448276&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;
   },
-  "keyToStringList": {
-    "kotlin-gradle-user-dirs": [
-      "C:\\Users\\User\\.gradle"
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;C:\\Users\\User\\.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\IdeaProjects\StendWithJar\src\main\kotlin" />
@@ -111,7 +112,7 @@
       <recent name="C:\IdeaProjects\StendWithJar\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SimpleExKt">
+  <component name="RunManager" selected="Gradle.StendWithJar [jar]">
     <configuration name="StendWithJar [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,8 +173,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.SimpleExKt" />
         <item itemvalue="Gradle.StendWithJar [jar]" />
+        <item itemvalue="Kotlin.SimpleExKt" />
         <item itemvalue="JAR Application.StendWithJar-1.0-SNAPSHOT.jar" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
@@ -204,13 +205,22 @@
       <option name="project" value="LOCAL" />
       <updated>1716555037201</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changed port reading">
+      <option name="closed" value="true" />
+      <created>1716557760596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716557760596</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="updated gradle" />
     <MESSAGE value="changed listener setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed listener setting" />
+    <MESSAGE value="changed port reading" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed port reading" />
   </component>
 </project>

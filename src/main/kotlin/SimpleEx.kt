@@ -66,6 +66,18 @@ class SimpleEx(title: String) : JFrame() {
                     totalStr += str
                     println("!!!totalStr = $totalStr")
                 }
+                if (totalStr.contains(";")){
+                    println("in totalStr.contains(\";\")")
+                    totalStr = totalStr.subSequence(0..<totalStr.length-1).toString()
+                    if (isNumeric(totalStr)) {
+                        val item = btnsItemsMap[totalStr]
+                        if  (itemsMap == null) itemsMap = getItemsMap(folderNamePath)
+                        val tempList = itemsMap!![item]?.toList()
+                        itemsComboBox.selectedItem = item
+                        showItem(tempList)
+                    }
+                    totalStr = ""
+                }
                 if (str.contains("\n") || str.contains(";")) {
                     if (isNumeric(totalStr)) {
                         val item = btnsItemsMap[totalStr]
