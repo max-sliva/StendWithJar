@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0ba485-f4d6-4c4b-bc4b-1a24bf791981" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx_win.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716557760596</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed string parsing">
+      <option name="closed" value="true" />
+      <created>1716631656060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716631656060</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,6 +230,7 @@
     <MESSAGE value="updated gradle" />
     <MESSAGE value="changed listener setting" />
     <MESSAGE value="changed port reading" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed port reading" />
+    <MESSAGE value="changed string parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed string parsing" />
   </component>
 </project>

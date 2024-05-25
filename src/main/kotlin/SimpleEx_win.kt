@@ -5,15 +5,12 @@ import java.awt.*
 import java.awt.event.ActionEvent
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
-import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
-import java.io.ObjectInputStream
+import java.io.*
 import java.util.*
 import javax.swing.*
 
 
-class SimpleEx(title: String) : JFrame() {
+class SimpleEx_win(title: String) : JFrame() {
 
     private val curPath = System.getProperty("user.dir")
     private val folderNamePath = "$curPath/folderName.properties"
@@ -31,8 +28,6 @@ class SimpleEx(title: String) : JFrame() {
     var itemsMap: MutableMap<String, Set<String>>? = null
     lateinit var newimg: Image
     lateinit var itemImage: ImageIcon
-//    val graphics = GraphicsEnvironment.getLocalGraphicsEnvironment()
-//    val device = graphics.defaultScreenDevice
     init {
         val myFile = File("$curPath/itemsBtns.dat")
         val fin = FileInputStream(myFile)
@@ -62,23 +57,18 @@ class SimpleEx(title: String) : JFrame() {
         var totalStr = ""
         serialPort!!.addEventListener { event: SerialPortEvent ->
             if (event.isRXCHAR) { // если есть данные для приема
-                var done = false
-                println("receiving from arduino")
                 var str = serialPort!!.readString()
-
                 str = str.trim()
-                println("str = $str")
 //                if (!str.contains("\n ;") && str != "" && str != ";") {
-//                if (!str.contains("\n ;") && str != "" && !str.contains(";")) {
+                if (!str.contains("\n ;") && str != "" && !str.contains(";")) {
 //                    println("received $str") //выводим принятую строку
                     totalStr += str
                     println("!!!totalStr = $totalStr")
-//                }
+                }
                 if (totalStr.contains(";")){
                     println("in totalStr.contains(\";\")")
                     totalStr = totalStr.subSequence(0..<totalStr.length-1).toString()
                     if (isNumeric(totalStr)) {
-                        done = true
                         val item = btnsItemsMap[totalStr]
                         if  (itemsMap == null) itemsMap = getItemsMap(folderNamePath)
                         val tempList = itemsMap!![item]?.toList()
@@ -87,20 +77,14 @@ class SimpleEx(title: String) : JFrame() {
                     }
                     totalStr = ""
                 }
-//                if (str.contains("\n") || str.contains(";")) {
-//                else if (str.contains(";") && str.length>1) {
-                if (str.contains(";") && str.length>1 && !done) {
-                    totalStr = str.subSequence(0..<str.length-1).toString()
+                if (str.contains("\n") || str.contains(";")) {
                     if (isNumeric(totalStr)) {
-                        println("totalStr = $totalStr")
                         val item = btnsItemsMap[totalStr]
                         if  (itemsMap == null) itemsMap = getItemsMap(folderNamePath)
                         val tempList = itemsMap!![item]?.toList()
                         itemsComboBox.selectedItem = item
                         showItem(tempList)
                     }
-                    //Thread.sleep(1000)
-                    println("clearing totalStr")
                     totalStr = ""
                 }
             }
@@ -110,16 +94,7 @@ class SimpleEx(title: String) : JFrame() {
         val device = graphics.defaultScreenDevice
         device.setFullScreenWindow(imageWindow) //for full screen
         imageWindow.isVisible = false
-//        device.setFullScreenWindow(this)
-        isUndecorated = true
-    val size = Toolkit.getDefaultToolkit().screenSize
-    // width will store the width of the screen
-    val screenWidth = size.getWidth().toInt()
-    // height will store the height of the screen
-    val screenHeight = size.getHeight().toInt()
-    setSize(screenWidth, screenHeight)
-    location = Point(0,0)
-}
+    }
 
     fun getFilesSet() = filesSet
 
@@ -194,14 +169,14 @@ class SimpleEx(title: String) : JFrame() {
 
         val itemsList = itemsMap!!.keys.toList()
         val comboBoxModel = DefaultComboBoxModel<String>()
-        itemsComboBox.setRenderer(MyComboBoxRenderer("Выберите экспонат: ▼"));
+        itemsComboBox.setRenderer(MyComboBoxRenderer_win("Выберите экспонат: ▼"));
         comboBoxModel.addAll(itemsList)
         itemsComboBox.addActionListener { e ->
             println("selected = ${e.actionCommand}")
             val curItem = itemsComboBox.selectedItem
             println("selected = $curItem")
             println("number to Arduino = ${itemsBtnsMap[curItem]}")
-            if (itemsBtnsMap[curItem]!=null) serialPort!!.writeString("${itemsBtnsMap[curItem]};")
+            serialPort!!.writeString("${itemsBtnsMap[curItem]};")
             val tempList = itemsMap!![itemsComboBox.selectedItem]?.toList()
             showItem(tempList)
         }
@@ -448,10 +423,11 @@ private fun createAndShowGUI() {
     c.gridy = 0 //
     val showMainBtn = JButton("Музей")
     showMainBtn.addActionListener {
-        val frame = SimpleEx("Simple")
-//        frame.width =
-//        val graphics = GraphicsEnvironment.getLocalGraphicsEnvironment()
-//        val device = graphics.defaultScreenDevice
+        val frame = SimpleEx_win("Simple")
+//    frame.isUndecorated = true
+        val graphics = GraphicsEnvironment.getLocalGraphicsEnvironment()
+        val device = graphics.defaultScreenDevice
+//        device.setFullScreenWindow(frame) //for full screen
         frame.isVisible = true
         firstFrame.isVisible = false
     }
@@ -498,7 +474,7 @@ fun main() {
 }
 
 //класс для отображения заголовка в комбобоксе
-internal class MyComboBoxRenderer(private val _title: String) : JLabel(), ListCellRenderer<Any?> {
+internal class MyComboBoxRenderer_win(private val _title: String) : JLabel(), ListCellRenderer<Any?> {
     override fun getListCellRendererComponent(
         list: JList<*>?, value: Any?,
         index: Int, isSelected: Boolean, hasFocus: Boolean
