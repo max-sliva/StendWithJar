@@ -10,10 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0ba485-f4d6-4c4b-bc4b-1a24bf791981" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx_win.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runOnLinux.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716631656060</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="made version for linux">
+      <option name="closed" value="true" />
+      <created>1716643524862</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716643524862</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -231,6 +237,7 @@
     <MESSAGE value="changed listener setting" />
     <MESSAGE value="changed port reading" />
     <MESSAGE value="changed string parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed string parsing" />
+    <MESSAGE value="made version for linux" />
+    <option name="LAST_COMMIT_MESSAGE" value="made version for linux" />
   </component>
 </project>
