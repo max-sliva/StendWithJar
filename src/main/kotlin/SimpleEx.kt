@@ -194,7 +194,13 @@ class SimpleEx(title: String) : JFrame() {
 
         val itemsList = itemsMap!!.keys.toList()
         val comboBoxModel = DefaultComboBoxModel<String>()
-        itemsComboBox.setRenderer(MyComboBoxRenderer("Выберите экспонат: ▼"));
+        itemsComboBox.setRenderer(MyComboBoxRenderer("Выберите экспонат: ▼"))
+        itemsComboBox.font = font
+//        var itemsComboBoxFont = itemsComboBox.font
+//        var fontSize = itemsComboBoxFont.size2D
+//        fontSize+=2
+//        itemsComboBoxFont = itemsComboBoxFont.deriveFont(fontSize)
+//        itemsComboBox.font = itemsComboBoxFont
         comboBoxModel.addAll(itemsList)
         itemsComboBox.addActionListener { e ->
             println("selected = ${e.actionCommand}")
@@ -202,6 +208,9 @@ class SimpleEx(title: String) : JFrame() {
             println("selected = $curItem")
             println("number to Arduino = ${itemsBtnsMap[curItem]}")
             if (itemsBtnsMap[curItem]!=null) serialPort!!.writeString("${itemsBtnsMap[curItem]};")
+            else {
+                //todo сделать отправку сигнала, чтобы погасить все светодиоды
+            }
             val tempList = itemsMap!![itemsComboBox.selectedItem]?.toList()
             showItem(tempList)
         }

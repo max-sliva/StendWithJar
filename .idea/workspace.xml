@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0ba485-f4d6-4c4b-bc4b-1a24bf791981" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/runOnLinux.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,8 +174,8 @@
       <list>
         <item itemvalue="Gradle.StendWithJar [jar]" />
         <item itemvalue="Kotlin.SimpleExKt" />
-        <item itemvalue="JAR Application.StendWithJar-1.0-SNAPSHOT.jar" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JAR Application.StendWithJar-1.0-SNAPSHOT.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716643524862</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added sh script to run on RPi">
+      <option name="closed" value="true" />
+      <created>1716645174720</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716645174720</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -238,6 +246,7 @@
     <MESSAGE value="changed port reading" />
     <MESSAGE value="changed string parsing" />
     <MESSAGE value="made version for linux" />
-    <option name="LAST_COMMIT_MESSAGE" value="made version for linux" />
+    <MESSAGE value="added sh script to run on RPi" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sh script to run on RPi" />
   </component>
 </project>
