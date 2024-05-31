@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0ba485-f4d6-4c4b-bc4b-1a24bf791981" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/buttons/buttons.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/SimpleEx.kt" afterDir="false" />
     </list>
@@ -111,7 +112,7 @@
       <recent name="C:\IdeaProjects\StendWithJar\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StendWithJar [jar]">
+  <component name="RunManager" selected="Kotlin.SimpleExKt">
     <configuration name="StendWithJar [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,8 +173,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StendWithJar [jar]" />
         <item itemvalue="Kotlin.SimpleExKt" />
+        <item itemvalue="Gradle.StendWithJar [jar]" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="JAR Application.StendWithJar-1.0-SNAPSHOT.jar" />
       </list>
@@ -236,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716645174720</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changes in font for items">
+      <option name="closed" value="true" />
+      <created>1717083479906</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717083479906</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -247,6 +256,7 @@
     <MESSAGE value="changed string parsing" />
     <MESSAGE value="made version for linux" />
     <MESSAGE value="added sh script to run on RPi" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sh script to run on RPi" />
+    <MESSAGE value="changes in font for items" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in font for items" />
   </component>
 </project>

@@ -209,7 +209,7 @@ class SimpleEx(title: String) : JFrame() {
             println("number to Arduino = ${itemsBtnsMap[curItem]}")
             if (itemsBtnsMap[curItem]!=null) serialPort!!.writeString("${itemsBtnsMap[curItem]};")
             else {
-                //todo сделать отправку сигнала, чтобы погасить все светодиоды
+                serialPort!!.writeString("100;")
             }
             val tempList = itemsMap!![itemsComboBox.selectedItem]?.toList()
             showItem(tempList)
@@ -373,6 +373,7 @@ class SimpleEx(title: String) : JFrame() {
 //        pane.border = BorderFactory.createLineBorder(Color.GREEN, 3)
 //        pane.layout = GridBagLayout()
         val text = File(filesSet.first()).readText()
+        //todo сделать текстовую область нередактируемой
         textArea.text = text
         textArea.lineWrap = true
         textArea.wrapStyleWord = true
