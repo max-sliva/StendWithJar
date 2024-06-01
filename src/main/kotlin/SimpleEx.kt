@@ -77,6 +77,7 @@ class SimpleEx(title: String) : JFrame() {
                 if (totalStr.contains(";")){
                     println("in totalStr.contains(\";\")")
                     totalStr = totalStr.subSequence(0..<totalStr.length-1).toString()
+                    println("total without last = $totalStr")
                     if (isNumeric(totalStr)) {
                         done = true
                         val item = btnsItemsMap[totalStr]
@@ -373,8 +374,14 @@ class SimpleEx(title: String) : JFrame() {
 //        pane.border = BorderFactory.createLineBorder(Color.GREEN, 3)
 //        pane.layout = GridBagLayout()
         val text = File(filesSet.first()).readText()
-        //todo сделать текстовую область нередактируемой
         textArea.text = text
+//        textArea.isEnabled = false
+        textArea.isEditable = false
+        textArea.addMouseListener(object : MouseAdapter() {
+            override fun mousePressed(mouseEvent: MouseEvent?) {
+                itemsComboBox.grabFocus()
+            }
+        })
         textArea.lineWrap = true
         textArea.wrapStyleWord = true
 //        textArea.border = BorderFactory.createLineBorder(Color.BLUE, 2)

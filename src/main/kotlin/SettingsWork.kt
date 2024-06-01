@@ -132,6 +132,7 @@ class SettingsWork: JFrame() {
                     if (event.isRXCHAR) { // если есть данные для приема
                         var str = serialPort!!.readString()
                         str = str.trim()
+                        println("str = $str")
                         if (!str.contains("\n ;") && str!="" && str!=";") {
 //                    println("received $str") //выводим принятую строку
                             totalStr+=str
@@ -161,7 +162,18 @@ class SettingsWork: JFrame() {
                                     this.validate()
                                 }
                             }
-                            if (isNumeric(totalStr)) {
+                            if (totalStr.contains(";")){
+                                println("in totalStr.contains(\";\")")
+                                totalStr = totalStr.subSequence(0..<totalStr.length-1).toString()
+                                if (isNumeric(totalStr)) {
+                                    println("$totalStr is numeric")
+                                    radioBtnsArray[totalStr.toInt()].isSelected = true
+                                    val curBtn = radioBtnsArray[totalStr.toInt()]
+                                    checkRadioBtn(curBtn)
+                                }
+                                totalStr = ""
+                            }
+                            else if (isNumeric(totalStr)) {
                                 println("$totalStr is numeric")
                                 radioBtnsArray[totalStr.toInt()].isSelected = true
                                 val curBtn = radioBtnsArray[totalStr.toInt()]
